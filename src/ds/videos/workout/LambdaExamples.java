@@ -6,6 +6,9 @@
 
 package ds.videos.workout;
 
+import ds.videos.interfaces.ChildInterface;
+import ds.videos.interfaces.NormalChildInterface;
+import ds.videos.interfaces.ParentInterface;
 import ds.videos.interfaces.ReturnLength;
 import ds.videos.interfaces.SumOfnumbers;
 
@@ -56,6 +59,16 @@ public class LambdaExamples{
 		// Method having single parameter no need to use '()' 
 		ReturnLength rl2 =  s ->  s.length();
 		System.out.println(rl2.returnLengthOfString("Selva"));
+		
+		
+		ParentInterface pi = () -> System.out.println("Parent interface invokation");
+		pi.parentInterfaceAbstractMethod();
+		
+		ChildInterface ci = () -> System.out.println("Child interface invokation");
+		ci.parentInterfaceAbstractMethod(); 
+		
+		NormalChildInterface nci = () -> System.out.println("Normal Child interface invokation");
+		nci.parentInterfaceAbstractMethod();
 		
 		
 		

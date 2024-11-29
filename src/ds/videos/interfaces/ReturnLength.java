@@ -1,7 +1,8 @@
 package ds.videos.interfaces;
 
+@FunctionalInterface
 public interface ReturnLength {
 	
-	abstract int returnLengthOfString(String s);
+	public int returnLengthOfString(String s);
 
 }
